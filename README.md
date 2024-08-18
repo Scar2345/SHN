@@ -4,19 +4,24 @@
 
 
 
-# Project Name
-Long Description about project. This project do that. This project is awesome...
-## Team members
-1. [Name 1](https://github.com/TH-Activities/saturday-hack-night-template)
-2. [Name 2](https://github.com/TH-Activities/saturday-hack-night-template)
-## Link to product walkthrough
-[link to video](Link Here)
-## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
-## Libraries used
-Library Name - Version
-## How to configure
-Instructions for setting up project
-## How to Run
-Instructions for running
+# Coin Collector Game
+
+### Long Description
+This project is a 2D coin collector game developed using the Godot engine. Players control a character that moves around the screen, collecting coins . It’s designed to provide a fun and challenging experience, with engaging gameplay mechanics and a vibrant visual style.
+
+### Team Members
+1. [Nandana](https://github.com/Scar2345) - Student
+
+### How It Works
+1. **Gameplay Overview:** The player controls a character using arrow keys or WASD to navigate through the space. The objective is to collect as many coins as possible.
+2. **Embed Video:** [Embed Video of Project Demo](https://www.example.com/embed-game-demo) - This embedded video provides a visual demonstration of the game in action.
+
+### Libraries Used
+- **Godot Engine** - 4.3: The primary game engine used for development, providing tools for scripting, animation, and game logic.
+- **Physics2D Library** - 1.0: Used for handling collision detection and physical interactions in the game.
+- **TiledMap Editor** - 1.3: Utilized for designing and managing the game levels and tilemaps.
+
+### How to Configure
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/coin-collector-game.git
