@@ -1,0 +1,226 @@
+[gd_scene load_steps=27 format=3 uid="uid://c2hbqxgimbtk3"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_h83mt"]
+[ext_resource type="Texture2D" uid="uid://8vt3sv6j3p3c" path="res://Assets/Actor/Characters/Hunter/SpriteSheet.png" id="1_jxnfx"]
+[ext_resource type="Script" path="res://Scripts/animated_controller.gd" id="3_1jvaj"]
+[ext_resource type="Shape2D" uid="uid://br85gjw67ukom" path="res://Resources/Player/player_collision_shape.tres" id="4_cftl7"]
+[ext_resource type="PackedScene" uid="uid://3ejwn7vde3vt" path="res://scenes/UI/inventory_ui.tscn" id="5_awnwi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk8lm"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1c64c"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4ohi"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhcfh"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n586"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdqka"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkwl1"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtube"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffbp5"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv7nq"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kplfh"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3vwo"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ynck"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkeah"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18vdv"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38cc2"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs7d1"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iouwb"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h0y4"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1pya"]
+atlas = ExtResource("1_jxnfx")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w75x2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk8lm")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1c64c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4ohi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhcfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n586")
+}],
+"loop": true,
+"name": &"back_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdqka")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkwl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtube")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffbp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv7nq")
+}],
+"loop": true,
+"name": &"front_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kplfh")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3vwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ynck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkeah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18vdv")
+}],
+"loop": true,
+"name": &"left_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38cc2")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs7d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iouwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h0y4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1pya")
+}],
+"loop": true,
+"name": &"right_walk",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+collision_mask = 14
+script = ExtResource("1_h83mt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.5, -0.499999)
+scale = Vector2(4.4375, 4.5625)
+sprite_frames = SubResource("SpriteFrames_w75x2")
+animation = &"back_walk"
+script = ExtResource("3_1jvaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.62939e-06, 1.00002)
+scale = Vector2(6.8125, 6.8125)
+shape = ExtResource("4_cftl7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3, 3)
+zoom = Vector2(0.9, 0.9)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-0.5, -0.499999)
+scale = Vector2(4.4375, 4.5625)
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.112676, 0.328767)
+shape = ExtResource("4_cftl7")
+
+[node name="InventoryUI" parent="." instance=ExtResource("5_awnwi")]
+
+[node name="Inventory" type="Node" parent="."]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
