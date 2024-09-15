@@ -16,7 +16,7 @@ This project is a 2D coin collector game developed using the Godot engine. Playe
 1. **Gameplay Overview:** The player controls a character using arrow keys or WASD to navigate through the space. The objective is to collect as many coins as possible.
 
 
-vido: https://github.com/user-attachments/assets/30b07c67-b368-4e91-9b37-76b728be7043
+video: https://github.com/user-attachments/assets/30b07c67-b368-4e91-9b37-76b728be7043
 
 
 ### Libraries Used
